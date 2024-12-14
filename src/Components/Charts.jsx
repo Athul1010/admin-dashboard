@@ -5,7 +5,6 @@ const Charts = () => {
   const options = {
     chart: {
       type: "bar",
-      height: 320,
       fontFamily: "Inter, sans-serif",
       toolbar: {
         show: false,
@@ -15,22 +14,14 @@ const Charts = () => {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: "70%",
+        columnWidth: "50%",
         borderRadiusApplication: "end",
-        borderRadius: 8,
+        borderRadius: 6,
       },
     },
     tooltip: {
       shared: true,
       intersect: false,
-    },
-    states: {
-      hover: {
-        filter: {
-          type: "darken",
-          value: 1,
-        },
-      },
     },
     stroke: {
       show: true,
@@ -39,12 +30,6 @@ const Charts = () => {
     },
     grid: {
       show: false,
-      strokeDashArray: 4,
-      padding: {
-        left: 2,
-        right: 2,
-        top: -14,
-      },
     },
     dataLabels: {
       enabled: false,
@@ -56,13 +41,10 @@ const Charts = () => {
       labels: {
         style: {
           fontFamily: "Inter, sans-serif",
-          fontSize: "12px",
+          fontSize: "10px",
         },
       },
       axisBorder: {
-        show: false,
-      },
-      axisTicks: {
         show: false,
       },
       categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
@@ -73,6 +55,28 @@ const Charts = () => {
     fill: {
       opacity: 1,
     },
+    responsive: [
+      {
+        breakpoint: 640, // Small devices
+        options: {
+          chart: {
+            height: 200, // Reduce chart height for mobile
+          },
+          plotOptions: {
+            bar: {
+              columnWidth: "60%",
+            },
+          },
+          xaxis: {
+            labels: {
+              style: {
+                fontSize: "8px",
+              },
+            },
+          },
+        },
+      },
+    ],
   };
 
   const series = [
@@ -89,13 +93,12 @@ const Charts = () => {
   ];
 
   return (
-    <div className="max-w-sm bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
-      <div className="flex justify-between pb-4 mb-4 border-b border-gray-200 dark:border-gray-700">
+    <div className="charts max-w-full sm:max-w-sm bg-white rounded-lg shadow dark:bg-gray-800 p-3 md:p-4">
+      <div className="flex justify-between pb-3 mb-3 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center">
-          <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center me-3">
+          <div className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center me-2">
             <svg
-              className="w-6 h-6 text-gray-500 dark:text-gray-400"
-              aria-hidden="true"
+              className="w-5 h-5 text-gray-500 dark:text-gray-400"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="0 0 20 19"
@@ -105,52 +108,33 @@ const Charts = () => {
             </svg>
           </div>
           <div>
-            <h5 className="leading-none text-2xl font-bold text-gray-900 dark:text-white pb-1">
+            <h5 className="text-lg font-bold text-gray-900 dark:text-white pb-1">
               3.4k
             </h5>
-            <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
-              Leads generated per week
+            <p className="text-xs font-normal text-gray-500 dark:text-gray-400">
+              Leads per week
             </p>
           </div>
         </div>
         <div>
-          <span className="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-green-900 dark:text-green-300">
-            <svg
-              className="w-2.5 h-2.5 me-1.5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 14"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 13V1m0 0L1 5m4-4 4 4"
-              />
-            </svg>
-            42.5%
+          <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-0.5 rounded-md dark:bg-green-900 dark:text-green-300">
+            +42.5%
           </span>
         </div>
       </div>
 
-      <ReactApexChart options={options} series={series} type="bar" height={320} />
+      <ReactApexChart options={options} series={series} type="bar" height={260} />
 
-      <div className="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between pt-5">
-        <div className="flex justify-between items-center">
-          <button
-            className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-          >
-            Last 7 days
-          </button>
-          <a
-            href="#"
-            className="uppercase text-sm font-semibold text-blue-600 hover:text-blue-700"
-          >
-            Leads Report
-          </a>
-        </div>
+      <div className="flex justify-between items-center pt-3">
+        <button className="text-xs text-gray-500 dark:text-gray-400 hover:text-gray-900">
+          Last 7 days
+        </button>
+        <a
+          href="#"
+          className="text-xs font-semibold text-blue-600 hover:text-blue-700"
+        >
+          Report
+        </a>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const Home = () => {
       <div className="flex">
         {/* Sidebar */}
         <div
-          className={`fixed top-0 left-0 h-[74vh] w-64 bg-blue-600 text-white p-4 transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+          className={`z-10 fixed top-0 left-0 h-full w-64 bg-blue-600 text-white p-4 transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
             } md:relative md:translate-x-0`}
         >
           {/* Close Button (Visible on Mobile/Tablet) */}
@@ -36,6 +36,15 @@ const Home = () => {
             <li className="hover:bg-blue-500 p-2 rounded">
               <a href="#content4">Content 4</a>
             </li>
+            <li className="hover:bg-blue-500 p-2 rounded">
+              <a href="#content3">Content 3</a>
+            </li>
+            <li className="hover:bg-blue-500 p-2 rounded">
+              <a href="#content4">Content 4</a>
+            </li>
+            <li className="hover:bg-blue-500 p-2 rounded">
+              <a href="#content4">Content 4</a>
+            </li>
           </ul>
         </div>
 
@@ -55,7 +64,7 @@ const Home = () => {
       </div>
 
       <div className='container'>
-        <div className='flex gap-[20px]'>
+        <div className='flex gap-[20px] justify-center'>
           <button className="border border-white px-4 py-2 rounded-full font-semibold text-white">
             # Boosting
           </button>
@@ -63,9 +72,10 @@ const Home = () => {
             # Startups
           </button>
         </div>
-        <div>
-          <h1 className='text-[40px] text-[white]'>Ignite your startup potential</h1>
-          <h1 className='text-[white] text-[40px]'>With <span className='text-[15px] px-[15px] py-[5px] btn-color border border-white rounded-full text-white'>Progress Instruments</span> booster</h1>
+        <div className='text-center'>
+          <h1 className='text-[25px] sm:text-[40px] text-[white]'>Ignite your startup potential</h1>
+          {/* <h1 className='text-[white] text-[40px]'>With <span className='text-[15px] px-[15px] py-[5px] btn-color border border-white rounded-full text-white'>Progress Instruments</span> booster</h1> */}
+          <h1 className='text-[25px] sm:text-[40px] text-[white]'>With Progress Instruments booster</h1>
         </div>
 
         <div className='flex justify-center'>
