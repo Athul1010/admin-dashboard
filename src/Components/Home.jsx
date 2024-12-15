@@ -22,7 +22,7 @@ const Home = () => {
           >
             <FaTimes />
           </button>
-          <h2 className="text-xl text-black font-bold mb-6">Sidebar</h2>
+          <h2 className="text-xl text-black font-bold mb-6">Interval</h2>
           <ul className="space-y-4 text-black">
             <li className="hover:bg-blue-500 p-2 rounded">
               <a href="#content1">Introduction</a>
@@ -65,10 +65,10 @@ const Home = () => {
 
       <div className='container mt-[40px]'>
         <div className='flex gap-[20px] justify-center md:justify-start'>
-          <button className="border border-white px-4 py-2 rounded-full font-semibold text-white">
+          <button className="border border-white px-4 py-2 rounded-full font-semibold text-white hover:bg-blue-500">
             # Boosting
           </button>
-          <button className="border border-white px-4 py-2 rounded-full font-semibold text-white">
+          <button className="border border-white px-4 py-2 rounded-full font-semibold text-white hover:bg-blue-500">
             # Startups
           </button>
         </div>
