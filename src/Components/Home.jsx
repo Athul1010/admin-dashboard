@@ -12,7 +12,7 @@ const Home = () => {
       <div className="flex">
         {/* Sidebar */}
         <div
-          className={`z-10 fixed top-0 left-0 h-full w-64 bg-blue-600 text-white p-4 transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+          className={`z-10 shadow-lg fixed top-0 left-0 h-full w-64 bg-white text-white p-4 transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
             } md:relative md:translate-x-0`}
         >
           {/* Close Button (Visible on Mobile/Tablet) */}
@@ -22,28 +22,28 @@ const Home = () => {
           >
             <FaTimes />
           </button>
-          <h2 className="text-xl font-bold mb-6">Sidebar</h2>
-          <ul className="space-y-4">
+          <h2 className="text-xl text-black font-bold mb-6">Sidebar</h2>
+          <ul className="space-y-4 text-black">
             <li className="hover:bg-blue-500 p-2 rounded">
-              <a href="#content1">Content 1</a>
+              <a href="#content1">Introduction</a>
             </li>
             <li className="hover:bg-blue-500 p-2 rounded">
-              <a href="#content2">Content 2</a>
+              <a href="#content2">Analyst</a>
             </li>
             <li className="hover:bg-blue-500 p-2 rounded">
-              <a href="#content3">Content 3</a>
+              <a href="#content3">Connections</a>
             </li>
             <li className="hover:bg-blue-500 p-2 rounded">
-              <a href="#content4">Content 4</a>
+              <a href="#content4">Boosting</a>
             </li>
             <li className="hover:bg-blue-500 p-2 rounded">
-              <a href="#content3">Content 3</a>
+              <a href="#content3">Analyst</a>
             </li>
             <li className="hover:bg-blue-500 p-2 rounded">
-              <a href="#content4">Content 4</a>
+              <a href="#content4">Collection</a>
             </li>
             <li className="hover:bg-blue-500 p-2 rounded">
-              <a href="#content4">Content 4</a>
+              <a href="#content4">Startups</a>
             </li>
           </ul>
         </div>
@@ -63,8 +63,8 @@ const Home = () => {
 
       </div>
 
-      <div className='container'>
-        <div className='flex gap-[20px] justify-center'>
+      <div className='container mt-[40px]'>
+        <div className='flex gap-[20px] justify-center md:justify-start'>
           <button className="border border-white px-4 py-2 rounded-full font-semibold text-white">
             # Boosting
           </button>
@@ -72,7 +72,7 @@ const Home = () => {
             # Startups
           </button>
         </div>
-        <div className='text-center'>
+        <div className='text-center md:text-left'>
           <h1 className='text-[25px] sm:text-[40px] text-[white]'>Ignite your startup potential</h1>
           {/* <h1 className='text-[white] text-[40px]'>With <span className='text-[15px] px-[15px] py-[5px] btn-color border border-white rounded-full text-white'>Progress Instruments</span> booster</h1> */}
           <h1 className='text-[25px] sm:text-[40px] text-[white]'>With Progress Instruments booster</h1>

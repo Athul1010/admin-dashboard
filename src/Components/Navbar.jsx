@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import logo from '../assets/logo.png';
+import { RiArrowDropDownLine } from "react-icons/ri";
+import user from '../assets/user.png'
+
 import Textbar from '../Components/Textbar.jsx'
 
 const Navbar = () => {
@@ -11,20 +13,25 @@ const Navbar = () => {
   };
 
   return (
-    <div className='container'>
+    <div className='container my-[1rem]'>
       <div className="relative">
         {/* Navbar */}
         <div className="flex justify-between items-center">
-          <div>
-            <img src={logo} className="h-14" alt="Logo" />
-            {/* <Textbar/> */}
+          <div className='flex items-center gap-[3rem]'>
+            <h4 className='text-xl font-bold'>Star.top</h4>
+            <span className='hidden lg:block'><Textbar /></span>
           </div>
           <div className="flex justify-center items-center gap-[15px]">
             <div className="md:flex justify-center items-center gap-[15px] hidden md:block">
-              <span>Home</span>
-              <span>About</span>
-              <span>Blogs</span>
-              <span>Best Places</span>
+              <span className='hover:border-b-2 border-blue-500'>Home</span>
+              <span className='hover:border-b-2 border-blue-500'>About</span>
+              <span className='hover:border-b-2 border-blue-500'>Blogs</span>
+              <span className='hover:border-b-2 border-blue-500'>Best Places</span>
+            </div>
+            <div className='flex justify-center items-center gap-[8px] border border-black rounded-full shadow-lg px-3 py-[2px]'>
+              <RiArrowDropDownLine />
+              <span>Kanoe Thora</span>
+              <img className='h-[20px]' src={user} alt="" />
             </div>
             <div>
               <span onClick={toggleSidebar} className="cursor-pointer md:hidden sm:block">
