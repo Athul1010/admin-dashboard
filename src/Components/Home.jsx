@@ -17,7 +17,7 @@ const Home = () => {
         >
           {/* Close Button (Visible on Mobile/Tablet) */}
           <button
-            className="block md:hidden mb-4 text-xl"
+            className="block md:hidden mb-4 text-xl text-black"
             onClick={() => setSidebarOpen(false)}
           >
             <FaTimes />
