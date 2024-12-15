@@ -93,7 +93,7 @@ const Charts = () => {
   ];
 
   return (
-    <div className="charts w-[70%] bg-white rounded-lg shadow dark:bg-gray-800 p-3 md:p-4">
+    <div className="charts w-[100%] bg-white rounded-lg shadow dark:bg-gray-800 p-3 md:p-4">
       <div className="flex justify-between pb-3 mb-3 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center">
           <div className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center me-2">
